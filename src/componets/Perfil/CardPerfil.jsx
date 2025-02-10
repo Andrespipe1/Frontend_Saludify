@@ -15,9 +15,7 @@ export const CardPerfil = () => {
             <div className="self-start">
                 <b>Apellido:</b><p className="inline-block ml-3">{auth.apellido}</p>
             </div >
-            <div className="self-start">
-                <b>Dirección:</b><p className="inline-block ml-3">{auth.direccion}</p>
-            </div>
+
             <div className="self-start">
                 <b>Teléfono:</b><p className="inline-block ml-3">{auth.telefono}</p>
             </div>

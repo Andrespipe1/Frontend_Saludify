@@ -12,7 +12,6 @@ const FormularioPerfil = () => {
         id: auth._id || "",
         nombre: auth.nombre || "",
         apellido: auth.apellido || "",
-        direccion: auth.direccion || "",
         telefono: auth.telefono || "",
         email: auth.email || "",
     });
@@ -24,7 +23,6 @@ const FormularioPerfil = () => {
                 id: auth._id || "",
                 nombre: auth.nombre || "",
                 apellido: auth.apellido || "",
-                direccion: auth.direccion || "",
                 telefono: auth.telefono || "",
                 email: auth.email || "",
             });
@@ -95,24 +93,6 @@ const FormularioPerfil = () => {
             placeholder="apellido"
             name="apellido"
             value={form.apellido}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor="direccion"
-            className="text-gray-700 uppercase font-bold text-sm"
-          >
-            Dirección:{" "}
-          </label>
-          <input
-            id="direccion"
-            type="text"
-            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5"
-            placeholder="direccion"
-            name="direccion"
-            value={form.direccion}
             onChange={handleChange}
           />
         </div>

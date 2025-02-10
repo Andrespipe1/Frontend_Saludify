@@ -27,9 +27,8 @@ const Dashboard = () => {
                         className="w-24 h-24 border-4 border-green-500 rounded-full"
                     />
                     <p className="mt-4 text-gray-300 text-center">
-                        <span className="bg-green-500 w-3 h-3 inline-block rounded-full"></span> Bienvenido {auth.nombre || "Genérico"}
+                        <span className="bg-green-500 w-3 h-3 inline-block rounded-full"></span> Bienvenido {auth.nombre || "de nuevo"}
                     </p>
-                    <p className="text-gray-400 text-sm mt-1">Rol: {auth?.rol || "paciente"}</p>
                 </div>
 
                 <hr className="mt-6 border-gray-700" />
