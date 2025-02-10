@@ -37,24 +37,27 @@ const FormularioPerfil = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (Object.values(form).includes("")) {
-            setMensaje({
-                respuesta: "Todos los campos deben ser ingresados",
-                tipo: false,
-            });
-            setTimeout(() => {
-                setMensaje({});
-            }, 3000);
-            return;
-        }
-        const resultado = await actualizarPerfil(form);
-        setMensaje(resultado);
-        setTimeout(() => {
-            setMensaje({});
-        }, 3000);
-    };
-
+      e.preventDefault();
+      
+      // Verifica que ningún campo esté vacío, contenga solo espacios o sea undefined/null
+      if (Object.values(form).some(valor => !valor || valor.trim() === "")) {
+          setMensaje({
+              respuesta: "Todos los campos deben ser ingresados",
+              tipo: false,
+          });
+          setTimeout(() => {
+              setMensaje({});
+          }, 3000);
+          return;
+      }
+  
+      const resultado = await actualizarPerfil(form);
+      setMensaje(resultado);
+      setTimeout(() => {
+          setMensaje({});
+      }, 3000);
+  };
+  
   return (
     <>
       {Object.keys(mensaje).length > 0 && (
