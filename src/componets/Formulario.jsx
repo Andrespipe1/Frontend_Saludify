@@ -67,12 +67,12 @@ export const Formulario = ({ paciente, registro }) => {
 
       if (registro?.id) {
         // Actualizar un registro existente
-        const url = `http://localhost:3000/api/registros/registro/${registro.id}`;
+        const url = `https://saludify-backend.onrender.com/api/registros/registro/${registro.id}`;
         await axios.put(url, form, { headers });
         console.log("Registro actualizado con éxito.");
       } else {
         // Crear un nuevo registro para el paciente
-        const url = `http://localhost:3000/api/registros/paciente/${pacienteId}`;
+        const url = `https://saludify-backend.onrender.com/api/registros/paciente/${pacienteId}`;
         await axios.post(url, form, { headers });
         console.log("Registro creado con éxito.");
       }

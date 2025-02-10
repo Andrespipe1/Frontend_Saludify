@@ -8,7 +8,6 @@ export const Register = () => {
   const [form, setForm] = useState({
     nombre: "",
     apellido: "",
-    direccion: "",
     telefono: "",
     email: "",
     password: "",

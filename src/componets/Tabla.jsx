@@ -15,7 +15,7 @@ const Tabla = () => {
   const listarPacientes = async () => {
     try {
       const token = localStorage.getItem("token");
-      const url = `http://localhost:3000/api/registros/${id}`;
+      const url = `https://saludify-backend.onrender.com/api/registros/${id}`;
       const options = {
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const Tabla = () => {
 
       if (confirmar) {
         const token = localStorage.getItem("token");
-        const url = `http://localhost:3000/api/registros/${id}`;
+        const url = `https://saludify-backend.onrender.com/api/registros/${id}`;
         const headers = {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
