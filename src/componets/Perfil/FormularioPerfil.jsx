@@ -108,7 +108,7 @@ const FormularioPerfil = () => {
             Teléfono:{" "}
           </label>
           <input
-            id="ditelefonoreccion"
+            id="telefono"
             type="text"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5"
             placeholder="telefono"
