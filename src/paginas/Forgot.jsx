@@ -19,7 +19,7 @@ export const Forgot = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = "https://frontend-saludify.vercel.app//api/recuperar-password";
+            const url = "https://frontend-saludify.vercel.app/api/recuperar-password";
             const respuesta = await axios.post(url, mail);
             console.log(respuesta.data.msg);
             toast.success(respuesta.data.msg);
