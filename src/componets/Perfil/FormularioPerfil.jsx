@@ -12,6 +12,7 @@ const FormularioPerfil = () => {
         id: auth._id || "",
         nombre: auth.nombre || "",
         apellido: auth.apellido || "",
+        direccion: auth.direccion || "",
         telefono: auth.telefono || "",
         email: auth.email || "",
     });
@@ -23,6 +24,7 @@ const FormularioPerfil = () => {
                 id: auth._id || "",
                 nombre: auth.nombre || "",
                 apellido: auth.apellido || "",
+                direccion: auth.direccion || "",
                 telefono: auth.telefono || "",
                 email: auth.email || "",
             });
@@ -37,27 +39,24 @@ const FormularioPerfil = () => {
     };
 
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      
-      // Verifica que ningún campo esté vacío, contenga solo espacios o sea undefined/null
-      if (Object.values(form).some(valor => !valor || valor.trim() === "")) {
-          setMensaje({
-              respuesta: "Todos los campos deben ser ingresados",
-              tipo: false,
-          });
-          setTimeout(() => {
-              setMensaje({});
-          }, 3000);
-          return;
-      }
-  
-      const resultado = await actualizarPerfil(form);
-      setMensaje(resultado);
-      setTimeout(() => {
-          setMensaje({});
-      }, 3000);
-  };
-  
+        e.preventDefault();
+        if (Object.values(form).includes("")) {
+            setMensaje({
+                respuesta: "Todos los campos deben ser ingresados",
+                tipo: false,
+            });
+            setTimeout(() => {
+                setMensaje({});
+            }, 3000);
+            return;
+        }
+        const resultado = await actualizarPerfil(form);
+        setMensaje(resultado);
+        setTimeout(() => {
+            setMensaje({});
+        }, 3000);
+    };
+
   return (
     <>
       {Object.keys(mensaje).length > 0 && (
@@ -102,13 +101,31 @@ const FormularioPerfil = () => {
 
         <div>
           <label
+            htmlFor="direccion"
+            className="text-gray-700 uppercase font-bold text-sm"
+          >
+            Dirección:{" "}
+          </label>
+          <input
+            id="direccion"
+            type="text"
+            className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5"
+            placeholder="direccion"
+            name="direccion"
+            value={form.direccion}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div>
+          <label
             htmlFor="telefono"
             className="text-gray-700 uppercase font-bold text-sm"
           >
             Teléfono:{" "}
           </label>
           <input
-            id="telefono"
+            id="ditelefonoreccion"
             type="text"
             className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md mb-5"
             placeholder="telefono"
