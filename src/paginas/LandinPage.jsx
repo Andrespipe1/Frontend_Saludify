@@ -14,10 +14,10 @@ export const LandinPage = () => {
 
     return (
         <div className={darkMode ? "dark" : ""}>
-            <main className='bg-[#F5F5F5] px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
-                <section className='bg-[#F5F5F5] px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+            <main className='bg-[#F5F5F5] px-10 md:px-20 lg:px-40 dark:bg-white'>
+                <section className='bg-[#F5F5F5] px-10 md:px-20 lg:px-40 dark:bg-white'>
                     <nav className='p-6 flex justify-between items-center'>
-                        <h1 className='text-3xl font-semibold text-green-600 dark:text-orange-400'>SALUD API</h1>
+                        <h1 className='text-3xl font-semibold text-green-600 dark:text-green-600'>SALUD API</h1>
                         <ul className='flex items-center gap-6'>
                             <li>
                                 <img 
@@ -31,11 +31,11 @@ export const LandinPage = () => {
                     </nav>
 
                     <div className='text-center pt-16'>
-                        <h2 className='text-5xl font-bold text-green-600 mb-4 md:text-6xl dark:text-orange-400'>Transforma tu Salud con Tecnología</h2>
-                        <h3 className='text-2xl text-gray-800 dark:text-gray-200 mb-6 md:text-3xl font-medium'>
+                        <h2 className='text-5xl font-bold text-green-600 mb-4 md:text-6xl dark:text-green-600'>Transforma tu Salud con Tecnología</h2>
+                        <h3 className='text-2xl text-black dark:text-black mb-6 md:text-3xl font-medium'>
                             Tu Compañero de Salud Personalizado
                         </h3>
-                        <p className='text-lg text-gray-800 dark:text-gray-200 max-w-2xl mx-auto mb-6 leading-relaxed md:text-xl'>
+                        <p className='text-lg text-black dark:text-black max-w-2xl mx-auto mb-6 leading-relaxed md:text-xl'>
                             "Todo lo que necesitas para cuidar de ti, con la comodidad de un solo clic."
                             <br />
                             Ya sea que quieras mejorar tu dieta, tus rutinas de ejercicio o dormir mejor, nuestra aplicación te ofrece herramientas fáciles de usar y recomendaciones basadas en tus datos.
@@ -59,8 +59,8 @@ export const LandinPage = () => {
 
                 <section>
                     <div>
-                        <h3 className='text-3xl py-1 text-gray-800 dark:text-gray-200'>Servicios Ofrecidos</h3>
-                        <p className='text-md py-2 leading-8 text-gray-800 dark:text-gray-200'>
+                        <h3 className='text-3xl py-1 text-green-600 dark:text-green-600'>Servicios Ofrecidos</h3>
+                        <p className='text-md py-2 leading-8 text-black dark:text-black'>
                             Ofrecemos una variedad de servicios para ayudarte a mejorar tu salud y bienestar.
                         </p>
                     </div>
@@ -96,10 +96,10 @@ export const LandinPage = () => {
 
 const ServiceCard = ({ icon, title, description }) => {
     return (
-        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-96 bg-white dark:bg-gray-800'>
+        <div className='text-center shadow-2xl p-10 rounded-xl my-10 md:w-72 lg:w-96 bg-white dark:bg-gray-200'>
             <img className='mx-auto' src={icon} alt="" />
-            <h3 className='text-lg font-medium pt-8 pb-2 text-green-600 dark:text-orange-400'>{title}</h3>
-            <p className='py-4 text-gray-800 dark:text-gray-200'>{description}</p>
+            <h3 className='text-lg font-medium pt-8 pb-2 text-green-600 dark:text-green-600'>{title}</h3>
+            <p className='py-4 text-black dark:text-black'>{description}</p>
         </div>
     );
 };
