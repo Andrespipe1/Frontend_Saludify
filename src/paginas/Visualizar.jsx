@@ -24,8 +24,8 @@ const Visualizar = () => {
         const consultarPacienteYRegistros = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const urlPaciente = `http://localhost:3000/api/paciente/${id}`;
-                const urlRegistros = `http://localhost:3000/api/registro/${id}`;
+                const urlPaciente = `https://saludify-backend.onrender.com/api/paciente/${id}`;
+                const urlRegistros = `https://saludify-backend.onrender.com/api/registro/${id}`;
                 
                 const options = {
                     headers: {
