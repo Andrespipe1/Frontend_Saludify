@@ -15,7 +15,7 @@ const Actualizar = () => {
         const consultarPaciente = async () => {
             try {
                 const token = localStorage.getItem('token')
-                const url = `https://frontend-saludify.vercel.app//api/paciente/${id}`
+                const url = `https://frontend-saludify.vercel.app/api/paciente/${id}`
                 const options = {
                     headers: {
                         'Content-Type': 'application/json',
