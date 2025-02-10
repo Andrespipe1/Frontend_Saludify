@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     // Función para LEER el perfil del usuario
     const perfil = async (token) => {
         try {
-            const url = `http://localhost:3000/api/perfilpaciente`;
+            const url = `https://saludify-backend.onrender.com/api/perfilpaciente`;
             const options = {
                 headers: {
                     'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
     const actualizarPerfil = async (datos) => {
         try {
             const token = localStorage.getItem("token");
-            const url = `http://localhost:3000/api/paciente/${datos.id}`;
+            const url = `https://saludify-backend.onrender.com/api/paciente/${datos.id}`;
             const options = {
                 headers: {
                     "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
     const actualizarPassword = async (datos) => {
         const token = localStorage.getItem('token');
         try {
-            const url = `http://localhost:3000/api/paciente/actualizarpassword`;
+            const url = `https://saludify-backend.onrender.com/api/paciente/actualizarpassword`;
             const options = {
                 headers: {
                     method: 'PUT',
